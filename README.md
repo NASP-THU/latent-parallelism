@@ -5,6 +5,7 @@
 - **Paper (accepted PDF):** [`LP_NSDI27_Accepted.pdf`](./LP_NSDI27_Accepted.pdf)
 - **Stable artifact URL:** https://github.com/NASP-THU/latent-parallelism
 - **Please evaluate Release / tag `v0.1.0`:** https://github.com/NASP-THU/latent-parallelism/releases/tag/v0.1.0
+- **Archived artifact (DOI):**: 10.5281/zenodo.21751064
 
 This README follows the NSDI artifact-evaluation packaging guidelines: **Getting Started Instructions**, **Detailed Instructions**, and explicit **Artifact Claims**.
 
