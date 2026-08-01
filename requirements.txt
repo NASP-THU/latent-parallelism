@@ -1,0 +1,33 @@
+# UNITE Artifact Dependencies
+# Tested with Python 3.10, CUDA 12.1, 4x NVIDIA RTX A6000 (48GB).
+#
+# Install order (preferred: bash scripts/setup_env.sh):
+#   1) PyTorch 2.5.1 + CUDA wheel (setup_env.sh pins cu121)
+#   2) python -m pip install -r requirements.txt
+#   3) PIP_NO_CACHE_DIR=1 python -m pip install flash-attn --no-build-isolation --no-cache-dir
+#   4) xfuser / yunchang (listed below) for Sequence Parallel baselines and UNITE warmup
+#   5) python -m pip install -e . --no-deps
+#   6) verify: python -c "import torch, flash_attn, xfuser, wan"
+#
+# environment.yml only creates Python 3.10 — still run scripts/setup_env.sh afterward.
+
+torch>=2.4.0,<2.6
+torchvision>=0.19.0,<0.21
+opencv-python>=4.9.0.80
+diffusers>=0.31.0
+transformers>=4.49.0
+tokenizers>=0.20.3
+accelerate>=1.1.1
+tqdm
+imageio
+easydict
+ftfy
+imageio-ffmpeg
+numpy>=1.23.5,<2
+
+# Sequence Parallel (Ulysses / Ring) + UNITE first-step SP warmup
+xfuser>=0.4.1
+yunchang>=0.6.0
+
+# Optional quality eval (not required for latency AE):
+#   pip install vbench

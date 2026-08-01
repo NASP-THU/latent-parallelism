@@ -1,0 +1,18 @@
+# Bootstrap-only conda env for UNITE.
+#
+# This file intentionally does NOT install PyTorch / flash-attn.
+# Those steps are CUDA- and machine-specific and are handled by:
+#   bash scripts/setup_env.sh
+#
+# Optional: create the empty env first, then run setup_env.sh:
+#   conda env create -f environment.yml
+#   ENV_NAME=unite bash scripts/setup_env.sh
+name: unite
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - setuptools
+  - wheel

@@ -1,0 +1,439 @@
+Metadata-Version: 2.4
+Name: unite
+Version: 0.1.0
+Summary: UNITE: Communication-Efficient Distributed Inference for Video Diffusion Models with Latent Parallelism
+Author: UNITE Authors
+License:                                  Apache License
+                                   Version 2.0, January 2004
+                                http://www.apache.org/licenses/
+        
+           TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+        
+           1. Definitions.
+        
+              "License" shall mean the terms and conditions for use, reproduction,
+              and distribution as defined by Sections 1 through 9 of this document.
+        
+              "Licensor" shall mean the copyright owner or entity authorized by
+              the copyright owner that is granting the License.
+        
+              "Legal Entity" shall mean the union of the acting entity and all
+              other entities that control, are controlled by, or are under common
+              control with that entity. For the purposes of this definition,
+              "control" means (i) the power, direct or indirect, to cause the
+              direction or management of such entity, whether by contract or
+              otherwise, or (ii) ownership of fifty percent (50%) or more of the
+              outstanding shares, or (iii) beneficial ownership of such entity.
+        
+              "You" (or "Your") shall mean an individual or Legal Entity
+              exercising permissions granted by this License.
+        
+              "Source" form shall mean the preferred form for making modifications,
+              including but not limited to software source code, documentation
+              source, and configuration files.
+        
+              "Object" form shall mean any form resulting from mechanical
+              transformation or translation of a Source form, including but
+              not limited to compiled object code, generated documentation,
+              and conversions to other media types.
+        
+              "Work" shall mean the work of authorship, whether in Source or
+              Object form, made available under the License, as indicated by a
+              copyright notice that is included in or attached to the work
+              (an example is provided in the Appendix below).
+        
+              "Derivative Works" shall mean any work, whether in Source or Object
+              form, that is based on (or derived from) the Work and for which the
+              editorial revisions, annotations, elaborations, or other modifications
+              represent, as a whole, an original work of authorship. For the purposes
+              of this License, Derivative Works shall not include works that remain
+              separable from, or merely link (or bind by name) to the interfaces of,
+              the Work and Derivative Works thereof.
+        
+              "Contribution" shall mean any work of authorship, including
+              the original version of the Work and any modifications or additions
+              to that Work or Derivative Works thereof, that is intentionally
+              submitted to Licensor for inclusion in the Work by the copyright owner
+              or by an individual or Legal Entity authorized to submit on behalf of
+              the copyright owner. For the purposes of this definition, "submitted"
+              means any form of electronic, verbal, or written communication sent
+              to the Licensor or its representatives, including but not limited to
+              communication on electronic mailing lists, source code control systems,
+              and issue tracking systems that are managed by, or on behalf of, the
+              Licensor for the purpose of discussing and improving the Work, but
+              excluding communication that is conspicuously marked or otherwise
+              designated in writing by the copyright owner as "Not a Contribution."
+        
+              "Contributor" shall mean Licensor and any individual or Legal Entity
+              on behalf of whom a Contribution has been received by Licensor and
+              subsequently incorporated within the Work.
+        
+           2. Grant of Copyright License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              copyright license to reproduce, prepare Derivative Works of,
+              publicly display, publicly perform, sublicense, and distribute the
+              Work and such Derivative Works in Source or Object form.
+        
+           3. Grant of Patent License. Subject to the terms and conditions of
+              this License, each Contributor hereby grants to You a perpetual,
+              worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+              (except as stated in this section) patent license to make, have made,
+              use, offer to sell, sell, import, and otherwise transfer the Work,
+              where such license applies only to those patent claims licensable
+              by such Contributor that are necessarily infringed by their
+              Contribution(s) alone or by combination of their Contribution(s)
+              with the Work to which such Contribution(s) was submitted. If You
+              institute patent litigation against any entity (including a
+              cross-claim or counterclaim in a lawsuit) alleging that the Work
+              or a Contribution incorporated within the Work constitutes direct
+              or contributory patent infringement, then any patent licenses
+              granted to You under this License for that Work shall terminate
+              as of the date such litigation is filed.
+        
+           4. Redistribution. You may reproduce and distribute copies of the
+              Work or Derivative Works thereof in any medium, with or without
+              modifications, and in Source or Object form, provided that You
+              meet the following conditions:
+        
+              (a) You must give any other recipients of the Work or
+                  Derivative Works a copy of this License; and
+        
+              (b) You must cause any modified files to carry prominent notices
+                  stating that You changed the files; and
+        
+              (c) You must retain, in the Source form of any Derivative Works
+                  that You distribute, all copyright, patent, trademark, and
+                  attribution notices from the Source form of the Work,
+                  excluding those notices that do not pertain to any part of
+                  the Derivative Works; and
+        
+              (d) If the Work includes a "NOTICE" text file as part of its
+                  distribution, then any Derivative Works that You distribute must
+                  include a readable copy of the attribution notices contained
+                  within such NOTICE file, excluding those notices that do not
+                  pertain to any part of the Derivative Works, in at least one
+                  of the following places: within a NOTICE text file distributed
+                  as part of the Derivative Works; within the Source form or
+                  documentation, if provided along with the Derivative Works; or,
+                  within a display generated by the Derivative Works, if and
+                  wherever such third-party notices normally appear. The contents
+                  of the NOTICE file are for informational purposes only and
+                  do not modify the License. You may add Your own attribution
+                  notices within Derivative Works that You distribute, alongside
+                  or as an addendum to the NOTICE text from the Work, provided
+                  that such additional attribution notices cannot be construed
+                  as modifying the License.
+        
+              You may add Your own copyright statement to Your modifications and
+              may provide additional or different license terms and conditions
+              for use, reproduction, or distribution of Your modifications, or
+              for any such Derivative Works as a whole, provided Your use,
+              reproduction, and distribution of the Work otherwise complies with
+              the conditions stated in this License.
+        
+           5. Submission of Contributions. Unless You explicitly state otherwise,
+              any Contribution intentionally submitted for inclusion in the Work
+              by You to the Licensor shall be under the terms and conditions of
+              this License, without any additional terms or conditions.
+              Notwithstanding the above, nothing herein shall supersede or modify
+              the terms of any separate license agreement you may have executed
+              with Licensor regarding such Contributions.
+        
+           6. Trademarks. This License does not grant permission to use the trade
+              names, trademarks, service marks, or product names of the Licensor,
+              except as required for reasonable and customary use in describing the
+              origin of the Work and reproducing the content of the NOTICE file.
+        
+           7. Disclaimer of Warranty. Unless required by applicable law or
+              agreed to in writing, Licensor provides the Work (and each
+              Contributor provides its Contributions) on an "AS IS" BASIS,
+              WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+              implied, including, without limitation, any warranties or conditions
+              of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+              PARTICULAR PURPOSE. You are solely responsible for determining the
+              appropriateness of using or redistributing the Work and assume any
+              risks associated with Your exercise of permissions under this License.
+        
+           8. Limitation of Liability. In no event and under no legal theory,
+              whether in tort (including negligence), contract, or otherwise,
+              unless required by applicable law (such as deliberate and grossly
+              negligent acts) or agreed to in writing, shall any Contributor be
+              liable to You for damages, including any direct, indirect, special,
+              incidental, or consequential damages of any character arising as a
+              result of this License or out of the use or inability to use the
+              Work (including but not limited to damages for loss of goodwill,
+              work stoppage, computer failure or malfunction, or any and all
+              other commercial damages or losses), even if such Contributor
+              has been advised of the possibility of such damages.
+        
+           9. Accepting Warranty or Additional Liability. While redistributing
+              the Work or Derivative Works thereof, You may choose to offer,
+              and charge a fee for, acceptance of support, warranty, indemnity,
+              or other liability obligations and/or rights consistent with this
+              License. However, in accepting such obligations, You may act only
+              on Your own behalf and on Your sole responsibility, not on behalf
+              of any other Contributor, and only if You agree to indemnify,
+              defend, and hold each Contributor harmless for any liability
+              incurred by, or claims asserted against, such Contributor by reason
+              of your accepting any such warranty or additional liability.
+        
+           END OF TERMS AND CONDITIONS
+        
+           APPENDIX: How to apply the Apache License to your work.
+        
+              To apply the Apache License to your work, attach the following
+              boilerplate notice, with the fields enclosed by brackets "[]"
+              replaced with your own identifying information. (Don't include
+              the brackets!)  The text should be enclosed in the appropriate
+              comment syntax for the file format. We also recommend that a
+              file or class name and description of purpose be included on the
+              same "printed page" as the copyright notice for easier
+              identification within third-party archives.
+        
+           Copyright [yyyy] [name of copyright owner]
+        
+           Licensed under the Apache License, Version 2.0 (the "License");
+           you may not use this file except in compliance with the License.
+           You may obtain a copy of the License at
+        
+               http://www.apache.org/licenses/LICENSE-2.0
+        
+           Unless required by applicable law or agreed to in writing, software
+           distributed under the License is distributed on an "AS IS" BASIS,
+           WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+           See the License for the specific language governing permissions and
+           limitations under the License.
+        
+Project-URL: paper, paper.pdf
+Requires-Python: <4.0,>=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: torch>=2.4.0
+Requires-Dist: torchvision>=0.19.0
+Requires-Dist: opencv-python>=4.9.0.80
+Requires-Dist: diffusers>=0.31.0
+Requires-Dist: transformers>=4.49.0
+Requires-Dist: tokenizers>=0.20.3
+Requires-Dist: accelerate>=1.1.1
+Requires-Dist: tqdm
+Requires-Dist: imageio
+Requires-Dist: easydict
+Requires-Dist: ftfy
+Requires-Dist: imageio-ffmpeg
+Requires-Dist: numpy<2,>=1.23.5
+Requires-Dist: xfuser>=0.4.1
+Provides-Extra: vbench
+Requires-Dist: vbench; extra == "vbench"
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: black; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+Dynamic: license-file
+
+# UNITE Artifact (NSDI '27)
+
+**UNITE**: *Communication-Efficient Distributed Inference for Video Diffusion Models with Latent Parallelism*
+
+This repository is the artifact for **Available + Functional + Results Reproduced** (practical R1 scope).  
+Paper PDF: [`paper.pdf`](paper.pdf). Upstream video backbone: [Wan2.1](https://github.com/Wan-Video/Wan2.1) (see `LICENSE.txt`).
+
+| Paper method | CLI in this artifact |
+|---|---|
+| **UNITE / Latent Parallelism** | `--latent_parallel --lp_overlap_ratio 0.4` |
+| Ulysses SP | `--ulysses_size N --ring_size 1` (+ `--t5_fsdp` as in scripts) |
+| Ring Attention | `--ulysses_size 1 --ring_size N` |
+| FSDP | `--dit_fsdp` (+ `--t5_fsdp`) |
+| Tensor Parallel | `--tensor_parallel_size N` |
+
+Paper defaults used by the scripts: **`r_max = 0.4`**, UniPC, `sample_steps=50`, `sample_shift=5.0`, `sample_guide_scale=5.0`, `base_seed=42`. Partition-dimension phase switch uses progress threshold **τ ≈ 0.7** inside the UNITE denoise loop. UNITE optionally runs a **one-step full-latent Sequence-Parallel warmup** before overlapping-slice steps.
+
+Primary model: **Wan2.1-T2V-14B**. Absolute latency numbers vary by GPU and interconnect; AE success is **relative ordering / substantial speedup vs TP** (and competitive vs SP/FSDP), not bit-exact match to every paper table.
+
+---
+
+## Hardware & Dependencies
+
+**Tested for this artifact packaging:**
+
+- 4× NVIDIA RTX A6000 (48 GB)
+- CUDA 12.x, Python 3.10
+- PyTorch 2.5.1 + flash-attn + xfuser (for SP baselines and UNITE warmup)
+
+**Recommended for reviewers:** multi-GPU (≥2, preferably 4), **≥48 GB VRAM per GPU** for Wan2.1-14B without aggressive offload. PCIe multi-GPU is fine; NVLink not required.
+
+Install:
+
+```bash
+bash scripts/setup_env.sh
+conda activate unite   # or ENV_NAME you chose
+```
+
+Manual alternative: create a Python 3.10 env, install a CUDA-matched `torch`/`torchvision`, then:
+
+```bash
+pip install -r requirements.txt
+pip install flash-attn --no-build-isolation
+pip install -e .
+```
+
+Set the checkpoint path (symlink or directory):
+
+```bash
+export CKPT_DIR=./Wan2.1-T2V-14B   # default if present
+# or: bash scripts/download_model.sh
+```
+
+---
+
+## Getting Started Instructions
+
+**Goal:** with weights already on disk, produce one UNITE video and printed denoising timing in roughly **≤30 minutes** wall-clock on multi-GPU.
+
+**What `scripts/getting_started.sh` runs:**
+
+| Setting | Value |
+|---|---|
+| Model | Wan2.1-T2V-14B |
+| Resolution | `832*480` |
+| Frames | 17 |
+| Steps / solver | 50 / UniPC |
+| Seed | 42 |
+| Method | `--latent_parallel --lp_overlap_ratio 0.4` |
+| GPUs | all visible (`NPROC`, override with `NPROC=4`) |
+| Output | `ae_outputs/getting_started/unite.mp4` + `generation.log` |
+
+```bash
+export CKPT_DIR=./Wan2.1-T2V-14B   # if needed
+bash scripts/getting_started.sh
+```
+
+**Success criteria:**
+
+1. Exit code 0 and file `ae_outputs/getting_started/unite.mp4` exists.
+2. Log contains a block like `UNITE Latent Parallelism Denoising` with `Total denoising time: …s`.
+3. Log ends with `Finished.`
+
+Optional overrides: `NPROC=2`, `OUT_DIR=...`, `MASTER_PORT=29601`, `PROMPT='...'`.
+
+---
+
+## Detailed Instructions
+
+### Run each method manually
+
+Assume `CKPT_DIR` is set and `N` GPUs are used (`NPROC=$N`).
+
+```bash
+# UNITE (Latent Parallelism)
+torchrun --nproc_per_node=$N generate.py \
+  --task t2v-14B --size 832*480 --frame_num 37 \
+  --ckpt_dir "$CKPT_DIR" --offload_model False --t5_fsdp \
+  --sample_solver unipc --sample_steps 50 --sample_shift 5.0 \
+  --sample_guide_scale 5.0 --base_seed 42 \
+  --latent_parallel --lp_overlap_ratio 0.4 \
+  --save_file out_unite.mp4
+
+# Ulysses SP
+torchrun --nproc_per_node=$N generate.py \
+  --task t2v-14B --size 832*480 --frame_num 37 \
+  --ckpt_dir "$CKPT_DIR" --offload_model False --t5_fsdp \
+  --sample_solver unipc --sample_steps 50 --sample_shift 5.0 \
+  --sample_guide_scale 5.0 --base_seed 42 \
+  --ulysses_size $N --ring_size 1 \
+  --save_file out_ulysses.mp4
+
+# Ring Attention
+torchrun --nproc_per_node=$N generate.py \
+  --task t2v-14B --size 832*480 --frame_num 37 \
+  --ckpt_dir "$CKPT_DIR" --offload_model False --t5_fsdp \
+  --sample_solver unipc --sample_steps 50 --sample_shift 5.0 \
+  --sample_guide_scale 5.0 --base_seed 42 \
+  --ulysses_size 1 --ring_size $N \
+  --save_file out_ring.mp4
+
+# FSDP
+torchrun --nproc_per_node=$N generate.py \
+  --task t2v-14B --size 832*480 --frame_num 37 \
+  --ckpt_dir "$CKPT_DIR" --offload_model False --t5_fsdp --dit_fsdp \
+  --sample_solver unipc --sample_steps 50 --sample_shift 5.0 \
+  --sample_guide_scale 5.0 --base_seed 42 \
+  --save_file out_fsdp.mp4
+
+# Tensor Parallel
+torchrun --nproc_per_node=$N generate.py \
+  --task t2v-14B --size 832*480 --frame_num 37 \
+  --ckpt_dir "$CKPT_DIR" --offload_model False --t5_fsdp \
+  --sample_solver unipc --sample_steps 50 --sample_shift 5.0 \
+  --sample_guide_scale 5.0 --base_seed 42 \
+  --tensor_parallel_size $N \
+  --save_file out_tp.mp4
+```
+
+### Latency comparison script (R1 reproduced path)
+
+```bash
+bash scripts/run_latency_compare.sh
+# Overrides: NPROC=4 FRAME_NUM=37 SIZE='832*480' SAMPLE_STEPS=50
+```
+
+**What it does:** runs UNITE, Ulysses, Ring, FSDP, and TP on **480p / 37 frames / 50 steps**, writes per-strategy videos/logs under `ae_outputs/latency_compare/`, then builds:
+
+- `latency_table.csv`
+- `latency_table.json`
+- stdout + `summary.txt`
+
+Interpret the table by **denoising_s** (primary). Expect UNITE to beat Tensor Parallel substantially on communication-heavy multi-GPU setups; ordering vs Ulysses/Ring/FSDP may vary with interconnect, but UNITE should remain competitive. Do **not** expect bit-exact equality with paper absolute numbers (different GPU SKUs / PCIe vs NVLink).
+
+Reference trend from prior 4×A6000 packaging runs at 480p/73f (illustrative only): UNITE ~465s, Ulysses ~602s, TP ~1534s denoising.
+
+### Optional VBench
+
+```bash
+pip install vbench
+python scripts/optional/evaluate_vbench.py \
+  --video_path ae_outputs/getting_started/unite.mp4 \
+  --output_dir ae_outputs/vbench
+# or: add --run_vbench to generate.py
+```
+
+VBench is **optional** and not required for the latency AE claim.
+
+### Troubleshooting
+
+| Issue | What to try |
+|---|---|
+| OOM | Use fewer frames (`FRAME_NUM=17`), 480p, or `--offload_model True` (slower). Prefer ≥48 GB GPUs for 14B. |
+| `flash-attn` build fails | Install a prebuilt wheel matching your torch/CUDA, or rebuild with the env’s CUDA toolkit. |
+| `xfuser` / SP errors | `pip install 'xfuser>=0.4.1' yunchang` (needed for Ulysses/Ring and UNITE warmup). |
+| NCCL / hang | Ensure free GPUs, unique `--master_port`, and `NCCL_P2P_DISABLE=1` only if your platform requires it. |
+| Checkpoint missing | `bash scripts/download_model.sh` or point `CKPT_DIR` at a local Wan2.1-T2V-14B tree. |
+
+---
+
+## Repository layout
+
+```
+generate.py                 # main entry (t2v only)
+wan/                        # Wan2.1 t2v + UNITE / SP / TP / FSDP
+scripts/
+  setup_env.sh
+  download_model.sh
+  getting_started.sh
+  run_latency_compare.sh
+  parse_latency.py
+  optional/                 # VBench + prompt subsets
+paper.pdf
+requirements.txt
+environment.yml
+LICENSE.txt                 # includes Wan2.1 upstream attribution
+```
+
+---
+
+## AE notes (short)
+
+- **Available:** this source tree + `paper.pdf` + install/run scripts.
+- **Functional:** Getting Started produces an mp4 + denoising timing.
+- **Results Reproduced (R1):** `run_latency_compare.sh` produces a multi-strategy latency table supporting the paper’s communication-efficiency claim under a reduced but real config. Full paper resolution/frame sweeps and NCCL bus-traffic tables are not required for this R1 path.
