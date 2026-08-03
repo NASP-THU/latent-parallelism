@@ -3,7 +3,7 @@
 **UNITE**: *Communication-Efficient Distributed Inference for Video Diffusion Models with Latent Parallelism*
 
 - **Paper (accepted PDF):** [`LP_NSDI27_Accepted.pdf`](./LP_NSDI27_Accepted.pdf)
-- **Stable artifact URL:** https://github.com/NASP-THU/latent-parallelism
+- **Stable artifact URL:** https://github.com/NASP-THU/UNITE
 - **Please evaluate Release / tag `v0.1.0`:** https://github.com/NASP-THU/latent-parallelism/releases/tag/v0.1.0
 - **Archived artifact (DOI):** 10.5281/zenodo.21751064
 
